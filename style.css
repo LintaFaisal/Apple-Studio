@@ -683,6 +683,28 @@ body {
     transform: translateX(-50%);
     animation: scrollBounce 2s ease-in-out infinite;
 }
+/* Use your existing accent color from variables */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--accent-color); /* This is #ff914d */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover); /* This is #ff7a2e */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 145, 77, 0.25);
+}
 
 @keyframes scrollBounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
