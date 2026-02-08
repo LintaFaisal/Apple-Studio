@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Studio - Creative Digital Agency</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-content">
+            <!-- Logo -->
+            <div class="logo">
+              <span class="logo-text">Apple Studio</span>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links">
+              <a href="#home" class="nav-link">Home</a>
+              <a href="#services" class="nav-link">Services</a>
+              <a href="#work" class="nav-link">Work</a>
+              <a href="about.html" class="nav-link">About</a>
+              <a href="#contact" class="nav-button">Let's Talk</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button">
+              <i class="ri-menu-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <div class="mobile-menu-content">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#work" class="mobile-nav-link">Work</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-button">Let's Talk</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section (Updated) -->
+      <section id="home" class="hero">
+        <!-- Background Elements -->
+        <div class="bg-dots"></div>
+        <div class="bg-grid">
+          <div class="grid-line"></div>
+          <div class="grid-line"></div>
+          <div class="grid-line"></div>
+        </div>
+
+        <!-- Left Side Images for Hero -->
+        <div class="hero-images-left">
+          <!-- Image 1 -->
+          <div class="floating-image image-1" data-delay="0.2">
+            <div class="image-wrapper">
+              <img src="images/1.gif" alt="Brand Identity" class="svg-image" />
+              <div class="orange-splash"></div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="floating-image image-2" data-delay="0.4">
+            <div class="image-wrapper">
+              <img src="images/2.gif" alt="Web Design" class="svg-image" />
+              <div class="orange-splash"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Images for Hero -->
+        <div class="hero-images-right">
+          <!-- Image 3 -->
+          <div class="floating-image image-3" data-delay="0.3">
+            <div class="image-wrapper">
+              <img
+                src="images/3.gif"
+                alt="Digital Marketing"
+                class="svg-image"
+              />
+              <div class="orange-splash"></div>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="floating-image image-4" data-delay="0.5">
+            <div class="image-wrapper">
+              <img src="images/4.gif" alt="Creative Design" class="svg-image" />
+              <div class="orange-splash"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Hero Content -->
+        <div class="hero-container">
+          <!-- Animated Logo -->
+          <div class="logo-section">
+            <div class="logo-animation">
+              <img
+                src="images/Apple studio animated.gif"
+                alt="Apple Studio Animated Logo"
+                class="main-logo-gif"
+              />
+            </div>
+          </div>
+
+          <!-- Main Headline Text -->
+          <div class="headline-section">
+            <div class="headline-wrapper">
+              <h1 class="hero-title">
+                <span class="hero-line-1">We make brands</span>
+                <span class="hero-line-1">visible.</span>
+                <span class="hero-line-3">Everywhere it matters.</span>
+              </h1>
+              <p class="hero-subtitle">
+                Bold design. Clear strategy. Real results.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="hero-buttons">
+            <a href="#contact" class="hero-button-primary">
+              Let's Build Your Brand
+              <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="#work" class="hero-button-secondary">View Our Work</a>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <div class="scroll-line">
+            <div class="scroll-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-32 px-8 lg:px-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-6xl font-bold text-black mb-20">What We Do</h2>
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <span class="service-number">01</span>
+              <h3 class="service-title">Web Design & Development</h3>
+              <ul class="service-list">
+                <li>
+                  <span class="service-bullet service-bullet-1"></span>
+                  <span>Brand-focused websites</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-1"></span>
+                  <span>Conversion-driven UI/UX</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-1"></span>
+                  <span>Clean, modern layouts</span>
+                </li>
+              </ul>
+              <i class="service-arrow ri-arrow-right-up-line"></i>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+              <span class="service-number">02</span>
+              <h3 class="service-title">Content Design & Creation</h3>
+              <ul class="service-list">
+                <li>
+                  <span class="service-bullet service-bullet-2"></span>
+                  <span>Social media content design</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-2"></span>
+                  <span>Brand visuals</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-2"></span>
+                  <span>Reels, posts, stories</span>
+                </li>
+              </ul>
+              <i class="service-arrow ri-arrow-right-up-line"></i>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+              <span class="service-number">03</span>
+              <h3 class="service-title">Photography & Videography</h3>
+              <ul class="service-list">
+                <li>
+                  <span class="service-bullet service-bullet-3"></span>
+                  <span>Social media shoots</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-3"></span>
+                  <span>Brand shoots</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-3"></span>
+                  <span>Short-form video content</span>
+                </li>
+              </ul>
+              <i class="service-arrow ri-arrow-right-up-line"></i>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+              <span class="service-number">04</span>
+              <h3 class="service-title">Digital Marketing</h3>
+              <ul class="service-list">
+                <li>
+                  <span class="service-bullet service-bullet-4"></span>
+                  <span>Social media marketing</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-4"></span>
+                  <span>Content-led campaigns</span>
+                </li>
+                <li>
+                  <span class="service-bullet service-bullet-4"></span>
+                  <span>Growth-focused strategies</span>
+                </li>
+              </ul>
+              <i class="service-arrow ri-arrow-right-up-line"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="work" class="py-32 px-8 lg:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-6xl font-bold text-black mb-16">Selected Work</h2>
+          <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item portfolio-item-large">
+              <div class="portfolio-image">
+                <img
+                  src="images/Identity brand.jpg"
+                  alt="Branding & Web Design"
+                  class="website-full-image"
+                />
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">Brand Identity</h3>
+                  <p class="portfolio-category">Branding & Web Design</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item portfolio-item-small">
+              <div class="portfolio-image">
+                <img
+                  src="images/photography and content.avif"
+                  alt="Photography & Content"
+                  class="website-full-image"
+                />
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">Studio</h3>
+                  <p class="portfolio-category">Photography & Content</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item portfolio-item-small">
+              <div class="portfolio-image">
+                <img
+                  src="images/Social Media marketing.png"
+                  alt="Social Media Marketing"
+                  class="website-full-image"
+                />
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">Social Media</h3>
+                  <p class="portfolio-category">Marketing</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-item portfolio-item-large">
+              <div class="portfolio-image">
+                <img
+                  src="images/Lifestyle Brand Campaign.jpg"
+                  alt="Lifestyle Brand Campaign"
+                  class="website-full-image"
+                />
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">Lifestyle Brand Campaign</h3>
+                  <p class="portfolio-category">Video Production & Strategy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-20">
+            <a
+              href="file:///G:/Projects/Apple%20Studios/portfolio.html"
+              class="view-portfolio-link"
+            >
+              View Full Portfolio
+              <i class="ri-arrow-right-line text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section id="about" class="py-32 px-8 lg:px-16 bg-amber-50">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 class="text-6xl font-bold text-black mb-16">
+              Why Work With Us
+            </h2>
+            <div class="space-y-12">
+              <!-- Reason 1 -->
+              <div>
+                <div class="flex gap-5">
+                  <span class="reason-bullet reason-bullet-1"></span>
+                  <h3 class="text-xl font-semibold text-black mb-3">
+                    We focus on visibility, not vanity
+                  </h3>
+                </div>
+                <p class="text-base text-gray-700 leading-relaxed">
+                  Your brand needs to be seen by the right people. We create
+                  designs and strategies that get you noticed where it matters
+                  most.
+                </p>
+              </div>
+
+              <!-- Reason 2 -->
+              <div>
+                <div class="flex gap-5">
+                  <span class="reason-bullet reason-bullet-2"></span>
+                  <h3 class="text-xl font-semibold text-black mb-3">
+                    Clear process, zero fluff
+                  </h3>
+                </div>
+                <p class="text-base text-gray-700 leading-relaxed">
+                  No confusing jargon or unnecessary meetings. We work
+                  efficiently and keep you informed every step of the way.
+                </p>
+              </div>
+
+              <!-- Reason 3 -->
+              <div>
+                <div class="flex gap-5">
+                  <span class="reason-bullet reason-bullet-3"></span>
+                  <h3 class="text-xl font-semibold text-black mb-3">
+                    Team-driven creativity
+                  </h3>
+                </div>
+                <p class="text-base text-gray-700 leading-relaxed">
+                  Every project gets our full creative team—designers,
+                  strategists, and content creators working together to make
+                  your brand stand out.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <blockquote
+              class="text-3xl italic text-gray-800 font-serif text-center lg:text-left"
+            >
+              "We believe brands should be bold, clear, and unforgettable."
+            </blockquote>
+            <p class="text-sm text-gray-500 text-center lg:text-left mt-4">
+              The Apple Studio Team
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="py-24 px-8 lg:px-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
+          <div>
+            <div
+              class="text-8xl font-bold text-white mb-4 count"
+              data-count="10"
+            >
+              0
+            </div>
+            <div class="text-base text-gray-400 tracking-widest uppercase">
+              BRANDS
+            </div>
+          </div>
+          <div>
+            <div
+              class="text-8xl font-bold text-white mb-4 count"
+              data-count="25"
+            >
+              0
+            </div>
+            <div class="text-base text-gray-400 tracking-widest uppercase">
+              PROJECTS
+            </div>
+          </div>
+          <div>
+            <div
+              class="text-8xl font-bold text-white mb-4 count"
+              data-count="2"
+            >
+              0
+            </div>
+            <div class="text-base text-gray-400 tracking-widest uppercase">
+              YEARS
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="contact" class="cta py-32 px-8 lg:px-16 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="text-6xl font-bold text-black mb-6">
+            Ready to Grow or Just Browsing?
+          </h2>
+          <p class="text-xl text-gray-600 mb-12">
+            If you're serious about scaling, we should talk. If not, this button
+            still works.
+          </p>
+
+          <a
+            href="https://wa.me/923455011157"
+            class="whatsapp-btn"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i> Okay, Convince Me
+          </a>
+
+          <p class="text-sm text-gray-500 mt-8">
+            No spam. No boring calls. Just clarity.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer removed as requested -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
