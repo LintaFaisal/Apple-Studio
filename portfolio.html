@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Apple Studio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Portfolio - Apple Studio | Websites · Social · Motion</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -31,53 +34,256 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      /* Additional portfolio-specific styles that work with existing style.css */
+
+      /* Portfolio Hero */
+      .portfolio-hero {
+        padding: 180px 2rem 80px;
+        background: var(--white);
+        text-align: center;
+      }
+
+      /* Portfolio GIF Sections */
+      .portfolio-gif-section {
+        padding: 80px 0;
+      }
+
+      .portfolio-gif-section.alternate-bg {
+        background: var(--gray-50);
+      }
+
+      .gif-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .gif-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .gif-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+      }
+
+      .gif-title {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--black);
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .gif-subhead {
+        font-size: 18px;
+        color: var(--gray-600);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Standard horizontal wrapper (16:9) for websites and animations */
+      .gif-wrapper {
+        width: 100%;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        margin: 30px 0 20px;
+        background: #f5f5f7;
+      }
+
+      .gif-wrapper img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      /* Vertical mobile-shaped wrapper for social media (9:16 aspect ratio) */
+      .gif-wrapper-vertical {
+        width: 100%;
+        max-width: 400px;
+        margin: 30px auto 20px;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        background: #f5f5f7;
+      }
+
+      .gif-wrapper-vertical img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+      }
+
+      /* Center the vertical container */
+      .vertical-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .gif-caption {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 15px;
+        color: var(--gray-500);
+      }
+
+      .gif-caption i {
+        color: var(--accent-color);
+        margin-right: 8px;
+      }
+
+      /* CTA Section */
+      .cta {
+        padding: 100px 20px;
+        text-align: center;
+        background: var(--white);
+        border-top: 1px solid var(--gray-200);
+      }
+
+      .cta h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--black);
+        margin-bottom: 20px;
+      }
+
+      .cta p {
+        font-size: 18px;
+        color: var(--gray-600);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #da8206;
+        color: white;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-btn:hover {
+        background: #da8206;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px hwb(40 18% 14% / 0.3);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .portfolio-hero {
+          padding: 140px 1.5rem 60px;
+        }
+
+        .gif-title {
+          font-size: 32px;
+        }
+
+        .gif-subhead {
+          font-size: 16px;
+        }
+
+        .cta h2 {
+          font-size: 32px;
+        }
+
+        .cta p {
+          font-size: 16px;
+        }
+
+        .whatsapp-btn {
+          padding: 14px 30px;
+          font-size: 16px;
+        }
+
+        .gif-wrapper-vertical {
+          max-width: 300px;
+          border-radius: 30px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gif-title {
+          font-size: 28px;
+        }
+
+        .gif-wrapper-vertical {
+          max-width: 260px;
+          border-radius: 25px;
+        }
+      }
+
+      /* Animation for fade-in */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .portfolio-gif-section {
+        animation: fadeInUp 0.8s ease forwards;
+      }
+    </style>
   </head>
   <body>
     <div id="root">
-      <!-- Navigation Bar -->
+      <!-- Navigation Bar - Matching About Page -->
       <nav class="navbar">
         <div class="nav-container">
           <div class="nav-content">
-            <!-- Logo -->
             <div class="logo">
               <a href="index.html" class="logo-text">Apple Studio</a>
             </div>
-
-            <!-- Desktop Navigation Links -->
             <div class="nav-links">
-              <a href="./" class="nav-link">Home</a>
-              <a href="./#services" class="nav-link">Services</a>
-              <a href="./portfolio.html" class="nav-link active">Portfolio</a>
-              <a href="./about.html" class="nav-link">About</a>
-              <a href="./#contact" class="nav-button">Let's Talk</a>
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="about.html" class="nav-link">About</a>
+              <a href="index.html#services" class="nav-link">Services</a>
+              <a href="portfolio.html" class="nav-link active">Portfolio</a>
+              <a href="index.html#contact" class="nav-button">Let's Talk</a>
             </div>
-
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-button">
               <i class="ri-menu-line"></i>
             </button>
           </div>
         </div>
-
-        <!-- Mobile Menu -->
         <div class="mobile-menu">
           <div class="mobile-menu-content">
             <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
             <a href="index.html#services" class="mobile-nav-link">Services</a>
             <a href="portfolio.html" class="mobile-nav-link active"
               >Portfolio</a
             >
-            <a href="about.html" class="mobile-nav-link">About</a>
             <a href="index.html#contact" class="mobile-nav-button"
               >Let's Talk</a
             >
@@ -86,337 +292,193 @@
       </nav>
 
       <!-- Portfolio Hero -->
-      <section class="portfolio-hero py-32 px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto text-center">
-          <h1 class="text-6xl md:text-8xl font-bold text-black mb-6">
-            Our Portfolio
+      <section class="portfolio-hero">
+        <div class="container">
+          <h1
+            style="
+              font-size: clamp(2.5rem, 7vw, 4.5rem);
+              font-weight: 800;
+              letter-spacing: -0.02em;
+              margin-bottom: 20px;
+            "
+          >
+            Our creative universe
           </h1>
-          <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Real websites we've designed and developed for fashion, beauty, and
-            medical brands.
+          <p
+            style="
+              font-size: 1.2rem;
+              color: var(--gray-600);
+              max-width: 680px;
+              margin: 0 auto;
+            "
+          >
+            Websites, social ecosystems, and motion narratives — each chapter
+            tells a story.
           </p>
         </div>
       </section>
 
-      <!-- Real Websites Section - Clean Design -->
-      <section class="clean-portfolio py-16 px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto">
-          <div class="clean-website-item">
-            <a
-              href="https://www.manaalarfeen.com"
-              target="_blank"
-              class="clean-website-link"
-            >
-              <div class="website-image-container">
-                <div class="website-image-wrapper">
-                  <img
-                    src="images/manal afeen.JPG"
-                    alt="Manaal Arfeen Website"
-                    class="website-full-image"
-                  />
-                  <div class="website-overlay">
-                    <span class="visit-site">Visit Website →</span>
-                  </div>
-                </div>
-              </div>
-              <div class="website-details">
-                <div class="website-category">Fashion E-commerce</div>
-                <h2 class="website-title">Manaal Arfeen - Luxury Fashion</h2>
-                <p class="website-description">
-                  Complete fashion e-commerce website for a luxury Pakistani
-                  fashion brand with product catalog, shopping cart, and
-                  seamless checkout experience.
-                </p>
-                <div class="website-tags">
-                  <span>Fashion</span>
-                  <span>E-commerce</span>
-                  <span>Shopify</span>
-                  <span>Pakistan</span>
-                </div>
-              </div>
-            </a>
+      <!-- SECTION 1: WEBSITES WE ENGINEERED (Horizontal - 16:9) -->
+      <div class="portfolio-gif-section">
+        <div class="gif-container">
+          <div class="gif-header">
+            <div class="gif-label">Digital architecture</div>
+            <h2 class="gif-title">Websites we engineered</h2>
+            <p class="gif-subhead">
+              Performance-first, conversion-focused, and visually iconic.
+            </p>
           </div>
-
-          <!-- Website 2: Apple Signs -->
-          <div class="clean-website-item">
-            <a
-              href="https://applesigns.com.pk/"
-              target="_blank"
-              class="clean-website-link"
-            >
-              <div class="website-image-container">
-                <div class="website-image-wrapper">
-                  <img
-                    src="images/applesigns.JPG"
-                    alt="Apple Signs - Signage & Branding Company Website"
-                    class="website-full-image"
-                  />
-                  <div class="website-overlay">
-                    <span class="visit-site">Visit Website →</span>
-                  </div>
-                </div>
-              </div>
-              <div class="website-details">
-                <div class="website-category">Signage & Branding</div>
-                <h2 class="website-title">
-                  Apple Signs - Premium Signage Solutions Since 1988
-                </h2>
-                <p class="website-description">
-                  A professional business website developed for Apple Signs,
-                  Pakistan's leading signage company since 1988. Features
-                  include company portfolio showcasing their 30+ years of work,
-                  client gallery with major brands like Jazz, VIVO, Coca Cola,
-                  and OPPO, downloadable business profile, and integrated
-                  contact form with reCAPTCHA protection.
-                </p>
-                <div class="website-tags">
-                  <span>Business Website</span>
-                  <span>Portfolio Showcase</span>
-                  <span>Client Gallery</span>
-                  <span>Contact Form</span>
-                  <span>PDF Download</span>
-                </div>
-              </div>
-            </a>
+          <div class="gif-wrapper">
+            <img
+              src="images/Website AS.gif"
+              alt="Websites portfolio showcase"
+            />
           </div>
-
-          <!-- Website 3: Dr. Armeela -->
-          <div class="clean-website-item">
-            <a
-              href="http://www.drarmeela.com"
-              target="_blank"
-              class="clean-website-link"
-            >
-              <div class="website-image-container">
-                <div class="website-image-wrapper">
-                  <img
-                    src="images/Armeela.JPG"
-                    alt="Dr. Armeela Website"
-                    class="website-full-image"
-                  />
-                  <div class="website-overlay">
-                    <span class="visit-site">Visit Website →</span>
-                  </div>
-                </div>
-              </div>
-              <div class="website-details">
-                <div class="website-category">Medical Professional</div>
-                <h2 class="website-title">Dr. Armeela - Medical Consultant</h2>
-                <p class="website-description">
-                  Professional medical website for a healthcare consultant
-                  featuring services, patient testimonials, appointment booking,
-                  and medical blog.
-                </p>
-                <div class="website-tags">
-                  <span>Medical</span>
-                  <span>Healthcare</span>
-                  <span>WordPress</span>
-                  <span>Appointment Booking</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- NEW Website 4: Neelum Adventure -->
-          <div class="clean-website-item">
-            <a
-              href="https://neelumadventure.com/"
-              target="_blank"
-              class="clean-website-link"
-            >
-              <div class="website-image-container">
-                <div class="website-image-wrapper">
-                  <img
-                    src="images/neelum-adventure.JPG"
-                    alt="Neelum Adventure Website"
-                    class="website-full-image"
-                  />
-                  <div class="website-overlay">
-                    <span class="visit-site">Visit Website →</span>
-                  </div>
-                </div>
-              </div>
-              <div class="website-details">
-                <div class="website-category">Travel & Tourism</div>
-                <h2 class="website-title">
-                  Neelum Adventure - Explore Pakistan
-                </h2>
-                <p class="website-description">
-                  Complete travel and tourism website featuring adventure
-                  packages, tour itineraries, and booking system for exploring
-                  the beautiful valleys of Pakistan.
-                </p>
-                <div class="website-tags">
-                  <span>Travel</span>
-                  <span>Tourism</span>
-                  <span>Booking</span>
-                  <span>Adventure</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- NEW Website 5: MDW Official -->
-          <div class="clean-website-item">
-            <a
-              href="https://mdwofficial.com/"
-              target="_blank"
-              class="clean-website-link"
-            >
-              <div class="website-image-container">
-                <div class="website-image-wrapper">
-                  <img
-                    src="images/mdwofficial.JPG"
-                    alt="MDW Official Website"
-                    class="website-full-image"
-                  />
-                  <div class="website-overlay">
-                    <span class="visit-site">Visit Website →</span>
-                  </div>
-                </div>
-              </div>
-              <div class="website-details">
-                <div class="website-category">Fashion Brand</div>
-                <h2 class="website-title">MDW Official - Modern Fashion</h2>
-                <p class="website-description">
-                  Contemporary fashion brand website showcasing premium
-                  collections with elegant product displays, lookbooks, and
-                  seamless shopping experience.
-                </p>
-                <div class="website-tags">
-                  <span>Fashion</span>
-                  <span>E-commerce</span>
-                  <span>Modern Design</span>
-                  <span>Showcase</span>
-                </div>
-              </div>
-            </a>
+          <div class="gif-caption">
+            <i class="ri-smartphone-line"></i> Custom e-commerce and business
+            platforms — Manaal Arfeen, Apple Signs, MDW Official, Neelum
+            Adventure, Dr. Armeela
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Social Media Content Section - Original 3-Item Layout -->
-      <section class="social-showcase py-16 px-8 lg:px-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-          <h2 class="text-4xl font-bold text-black mb-12">
-            Social Media Content We Created
-          </h2>
-          <p class="text-gray-600 mb-12 max-w-3xl">
-            Engaging social media content that drives brand awareness and
-            customer engagement for our clients.
-          </p>
-
-          <div class="social-grid-clean">
-            <!-- First Row: 3 Items Only - Dr. Armeela -->
-            <div class="social-item insta-page">
-              <div class="social-image">
-                <img
-                  src="images/instapost.JPG"
-                  alt="drarmeela Instagram Page"
-                  class="website-full-image"
-                />
-                <div class="social-image-overlay">
-                  <div class="social-hover-content">
-                    <i class="ri-instagram-fill"></i>
-                    <h3>Instagram Page</h3>
-                    <p>
-                      Professional healthcare presence with trust-building
-                      visuals
-                    </p>
-                    <span class="social-type">Medical Branding</span>
-                  </div>
-                </div>
-              </div>
-              <div class="social-info">
-                <h3>Dr. Armeela Instagram</h3>
-                <p>
-                  Building medical authority through curated professional
-                  content
-                </p>
-              </div>
-            </div>
-
-            <!-- Manaal Arfeen -->
-            <div class="social-item insta-page">
-              <div class="social-image">
-                <img
-                  src="images/instaaaaa.JPG"
-                  alt="manaalarfeen Instagram Page"
-                  class="website-full-image"
-                />
-                <div class="social-image-overlay">
-                  <div class="social-hover-content">
-                    <i class="ri-instagram-fill"></i>
-                    <h3>Instagram Page</h3>
-                    <p>
-                      Elegant fashion storytelling through curated style boards
-                    </p>
-                    <span class="social-type">Fashion Narrative</span>
-                  </div>
-                </div>
-              </div>
-              <div class="social-info">
-                <h3>Manaal Arfeen Instagram</h3>
-                <p>Luxury fashion brand showcasing premium collections</p>
-              </div>
-            </div>
-
-            <!-- Instagram Stories (you can change this to MDW Official if you have their social image) -->
-            <div class="social-item insta-story-wide">
-              <div class="social-image">
-                <img
-                  src="images/instastory.JPG"
-                  alt="Instagram Stories"
-                  class="website-full-image"
-                />
-                <div class="social-image-overlay">
-                  <div class="social-hover-content">
-                    <i class="ri-gallery-fill"></i>
-                    <h3>Instagram Stories</h3>
-                    <p>Interactive visual sequences that drive engagement</p>
-                    <span class="social-type">Story Experience</span>
-                  </div>
-                </div>
-              </div>
-              <div class="social-info">
-                <h3>Interactive Stories</h3>
-                <p>
-                  Sequential storytelling that guides viewers through brand
-                  journeys
-                </p>
-              </div>
+      <!-- SECTION 2: SOCIAL MEDIA WE HANDLED (Vertical - Mobile Shape 9:16) -->
+      <div class="portfolio-gif-section alternate-bg">
+        <div class="gif-container">
+          <div class="gif-header">
+            <div class="gif-label">Growth engines</div>
+            <h2 class="gif-title">Social media we handle</h2>
+            <p class="gif-subhead">
+              Organic and paid strategies that build communities and drive
+              engagement.
+            </p>
+          </div>
+          <div class="vertical-center">
+            <div class="gif-wrapper-vertical">
+              <img src="images/socialmediaAS.gif" alt="Social media showcase" />
             </div>
           </div>
+          <div class="gif-caption">
+            <i class="ri-instagram-fill"></i> Instagram, LinkedIn and
+            story-driven campaigns — Dr. Armeela, Manaal Arfeen, Apple Signs
+          </div>
         </div>
-      </section>
+      </div>
+
+      <!-- SECTION 3: ANIMATIONS WE HAVE WORKED ON (Horizontal - 16:9) -->
+      <div class="portfolio-gif-section">
+        <div class="gif-container">
+          <div class="gif-header">
+            <div class="gif-label">Motion and micro-interactions</div>
+            <h2 class="gif-title">Animations we have crafted</h2>
+            <p class="gif-subhead">
+              Cinematic teasers, 3D spins, UI delights — elevating brand
+              storytelling.
+            </p>
+          </div>
+          <div class="gif-wrapper">
+            <img src="images/Animation AS.gif" alt="Animations showcase" />
+          </div>
+          <div class="gif-caption">
+            <i class="ri-magic-line"></i> Product animations, logo reveals, 3D
+            spins and micro-interactions — motion showreel
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional description text -->
+      <div
+        style="
+          max-width: 880px;
+          margin: 0 auto 60px;
+          text-align: center;
+          padding: 0 20px;
+        "
+      >
+        <p style="color: var(--gray-600); font-size: 16px; line-height: 1.6">
+          From luxury fashion e-commerce to medical authority sites, social
+          storytelling, and motion design — we deliver complete digital
+          identities. Each visual represents a chapter of our work.
+        </p>
+      </div>
 
       <!-- CTA Section -->
-      <section id="contact" class="cta py-32 px-8 lg:px-16 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-6xl font-bold text-black mb-6">
-            Ready for Your Website?
-          </h2>
-          <p class="text-xl text-gray-600 mb-12">
-            Let's create something amazing together. Just like we did for these
-            brands.
-          </p>
-
-          <a
-            href="https://wa.me/923455011157"
-            class="whatsapp-btn"
-            target="_blank"
-          >
-            <i class="fab fa-whatsapp"></i> Start Your Project
-          </a>
-
-          <p class="text-sm text-gray-500 mt-8">
-            Free consultation + website analysis included
-          </p>
-        </div>
+      <section id="contact" class="cta">
+        <h2>Ready to elevate your brand?</h2>
+        <p>
+          Websites, social strategies, motion — we build digital experiences
+          that resonate.
+        </p>
+        <a
+          href="https://wa.me/923455011157"
+          class="whatsapp-btn"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i> Start your project
+        </a>
+        <p style="margin-top: 20px; font-size: 14px; color: var(--gray-500)">
+          Free consultation and portfolio deep dive
+        </p>
       </section>
+
+      <!-- Footer - Matching About Page -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <h3 class="footer-logo">Apple Studio</h3>
+              <p class="footer-tagline">
+                Making brands visible everywhere it matters.
+              </p>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">QUICK LINKS</h4>
+              <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="index.html#services" class="footer-link">Services</a>
+                <a href="portfolio.html" class="footer-link">Portfolio</a>
+                <a href="index.html#contact" class="footer-link">Contact</a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">CONNECT</h4>
+              <div class="social-links">
+                <a
+                  href="https://www.instagram.com/applestudio.co?igsh=MXNvNzI5cXF1bDViYQ=="
+                  class="social-link"
+                  target="_blank"
+                >
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/applestudio-agency/"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1C5N6UxvaG/"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <i class="ri-facebook-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="copyright">© 2025 Apple Studio. All rights reserved.</p>
+            <div class="footer-legal">
+              <a href="#" class="legal-link">Privacy</a>
+              <a href="#" class="legal-link">Terms</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <script src="script.js"></script>
     <script src="portfolio-script.js"></script>
   </body>
 </html>
